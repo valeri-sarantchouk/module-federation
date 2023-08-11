@@ -1,0 +1,25 @@
+{
+  "name": "mfe-button",
+  "version": "1.0.0",
+  "description": "Remote Button element to be federated into the host app",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
+  },
+  "keywords": [
+    "webpack",
+    "microfrontends",
+    "javascript"
+  ],
+  "author": "Valeri Sarantchouk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeri-sarantchouk/module-federation/issues"
+  },
+  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme"
+}

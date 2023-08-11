@@ -11,5 +11,11 @@
   "devDependencies": {
     "webpack": "^5.88.2",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "workspaces": [
+    "mfe-button",
+    "mfe-header",
+    "mfe-footer",
+    "mfe-nav"
+  ]
 }
