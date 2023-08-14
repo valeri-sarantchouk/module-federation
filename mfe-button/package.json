@@ -1,7 +1,7 @@
 {
   "name": "mfe-button",
   "version": "1.0.0",
-  "description": "Remote Button element to be federated into the host app",
+  "description": "Remote microfrontend app: Button",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {

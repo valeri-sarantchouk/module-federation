@@ -1,16 +1,7 @@
 {
   "name": "mfe-header",
   "version": "1.0.0",
-  "description": "Remote Header application to be included into a microfrontend host app",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
-  },
+  "description": "Remote Header app",
   "keywords": [
     "webpack",
     "microfrontends",
@@ -18,8 +9,32 @@
   ],
   "author": "Valeri Sarantchouk",
   "license": "ISC",
+  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
+  },
   "bugs": {
     "url": "https://github.com/valeri-sarantchouk/module-federation/issues"
   },
-  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme"
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack build --watch --progress",
+    "start": "webpack serve --open --define-process-env-node-env production --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanup": "rm -rf node_modules/"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
 }
