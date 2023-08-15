@@ -4,16 +4,20 @@ import './styles/header-styles.scss';
 function createHeader() {
   console.log('init header element');
 
+  const headerElement = document.createElement("mfe-header");
+
   const headerContainerElement = document.createElement('div');
   headerContainerElement.classList.add('mfe-header-container');
-
+  
   const titleElement = document.createElement('h1');
-  headerContainerElement.classList.add('mfe-header-title');
-  headerContainerElement.setAttribute('id', 'header-title');
-  headerContainerElement.innerHTML = 'MFE Header';
-
+  titleElement.classList.add('mfe-header-title');
+  titleElement.setAttribute('id', 'header-title');
+  titleElement.innerHTML = 'MFE Header';
+  
   headerContainerElement.appendChild(titleElement);
-  return headerContainerElement;
+  headerElement.appendChild(headerContainerElement);
+
+  return headerElement;
 }
 
 export default createHeader;

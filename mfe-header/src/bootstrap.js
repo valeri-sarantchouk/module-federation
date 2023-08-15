@@ -1,10 +1,9 @@
 import createHeader from './app';
 
-// load app
-const mainElement = document.createElement("main");
-mainElement.appendChild(createHeader());
-
-document.body.appendChild(mainContainerElement);
+// load header app
+const headerHostElement = document.getElementById("headerPlacehholder");
+headerHostElement.appendChild(createHeader());
+document.body.appendChild(headerHostElement);
 
 // For a plain JavaScript app without any dependencies, the boostrap steps is not necessary; 
 // app.js (for exporting as a remote) and index.js (for standalone testing) would be enough.

@@ -1,7 +1,7 @@
 import createApp from './app';
 
-// load app
-const mainElement = document.createElement("main");
-mainElement.appendChild(createApp());
+// load host app
+const rootElement = document.getElementById("mfe-root");
+rootElement.appendChild(createApp());
 
-document.body.appendChild(mainContainerElement);
+document.body.appendChild(rootElement);

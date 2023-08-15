@@ -11,7 +11,8 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: '/',
+    // publicPath: 'auto',
+    // publicPath: '/',
     // publicPath: 'http://localhost:3001/',
     uniqueName: "module-federation-header",
     clean: true,
@@ -27,14 +28,10 @@ module.exports = {
     new ModuleFederationPlugin({
       // a unique name to be used by host
       name: 'remoteHeader',
-      filename: 'remote-header-entry.js',
+      // filename: 'remote-header-entry.js', // defaults to the 'name' value: remoteHeader.js
       exposes: {
-        './Header': './src/app',
-      },
-      // exposes: {
-      //   './react': 'react',
-      //   './react-dom': 'react-dom',
-      // },
+        './header': './src/app',
+      }
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

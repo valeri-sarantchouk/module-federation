@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { dependencies } = require("./package.json");
@@ -9,7 +10,10 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
+    filename: "[name].js",
     path: path.resolve(__dirname, 'dist'),
+
+    // publicPath: 'auto',
     publicPath: '/',
 
     // Each build needs a unique name to avoid runtime; defaults to "name" in package.json.
@@ -28,19 +32,8 @@ module.exports = {
       name: "Host",
       // List of remotes with URLs
       remotes: {
-        'remote-header': `remoteHeader@http://localhost:4001/remote-header-entry.js`,
+        'remote-header-app': `remoteHeader@http://localhost:4001/remoteHeader.js`,
       },
-      // shared: {
-      //   ...dependencies,
-      //   react: {
-      //     singleton: true,
-      //     requiredVersion: dependencies["react"],
-      //   },
-      //   "react-dom": {
-      //     singleton: true,
-      //     requiredVersion: dependencies["react-dom"],
-      //   },
-      // },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -48,9 +41,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx"],
-    // modules: ['node_modules'],
-    // exportsFields: ['exports'],
+    extensions: [".js", ".jsx"]
   },
   module: {
     rules: [
