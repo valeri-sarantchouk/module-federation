@@ -1,13 +1,13 @@
-Top level shell (host) project that assembles remote apps into a single UI using Webpack Module Federation.
+Monorepo that contains all pieces of a Micro-Front-End (MFE) app: host app and remote (aka federated) apps. Each remote app can be managed independently from other remotes: it can be stored in its own source repository and developed independently from other remotes.
 
-The monorepo contains all remote apps mfe-header, mfe-nav, mfe-button. 
+Plain JavaScript implemtation is used to demonstrate module federation in the simplest way possible. For React and Angular micro-frontend implementations see my other GitHub repositories.
 
-All applications (host and remotes) are implemented as plain JavaScript modules in order to demonstate module federation in the simplest way possible.
+Components:
+  * Host app:
+      * host
 
-Examples of federated apps written in React, Angular and Svelte implementations, see my other repositories.
-
-Remote apps: 
-  * Header
-  * Navigation
-  * Footer
-  * Button
+  * Remote apps: 
+      * Header
+      * Navigation
+      * Footer
+      * Button
