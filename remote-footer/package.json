@@ -1,25 +1,20 @@
 {
-  "name": "mfe-footer",
+  "name": "module-federation-footer",
   "version": "1.0.0",
   "description": "Remote Footer app to be included into a microfrontend host app",
+  "author": "Valeri Sarantchouk",
+  "license": "ISC",
   "main": "index.js",
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack build --progress",
+    "start": "webpack serve",
+    "start2": "webpack serve --open --define-process-env-node-env production --progress",
+    "cleanup": "rm -rf node_modules/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
   },
-  "keywords": [
-    "webpack",
-    "microfrontends",
-    "javascript"
-  ],
-  "author": "Valeri Sarantchouk",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/valeri-sarantchouk/module-federation/issues"
-  },
-  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme"
+  "devDependencies": {}
 }

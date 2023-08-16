@@ -11,9 +11,10 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    // publicPath: 'auto',
-    // publicPath: '/',
-    // publicPath: 'http://localhost:3001/',
+
+    // publicPath: either 'auto' or 'http://localhost:4001/' will work
+    publicPath: 'auto',
+    // publicPath: 'http://localhost:4001/',
     uniqueName: "module-federation-header",
     clean: true,
   },
@@ -23,6 +24,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    // hot: true
   },
   plugins: [
     new ModuleFederationPlugin({

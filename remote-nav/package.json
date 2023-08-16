@@ -1,25 +1,16 @@
 {
-  "name": "mfe-nav",
+  "name": "module-federation-nav",
   "version": "1.0.0",
   "description": "Remote microfrontend app: Navigation",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
-  },
-  "keywords": [
-    "webpack",
-    "microfrontends",
-    "javascript"
-  ],
   "author": "Valeri Sarantchouk",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/valeri-sarantchouk/module-federation/issues"
-  },
-  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme"
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack build --progress",
+    "start": "webpack serve",
+    "start2": "webpack serve --open --define-process-env-node-env production --progress",
+    "cleanup": "rm -rf node_modules/"
+  }
 }

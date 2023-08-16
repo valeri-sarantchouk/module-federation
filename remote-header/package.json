@@ -1,26 +1,15 @@
 {
-  "name": "mfe-header",
+  "name": "module-federation-header-app",
   "version": "1.0.0",
   "description": "Remote Header app",
-  "keywords": [
-    "webpack",
-    "microfrontends",
-    "javascript"
-  ],
   "author": "Valeri Sarantchouk",
   "license": "ISC",
-  "homepage": "https://github.com/valeri-sarantchouk/module-federation#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
-  },
-  "bugs": {
-    "url": "https://github.com/valeri-sarantchouk/module-federation/issues"
-  },
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "webpack build --watch --progress",
-    "start": "webpack serve --open --define-process-env-node-env production --progress",
+    "build": "webpack build --progress",
+    "start": "webpack serve",
+    "start2": "webpack serve --open --define-process-env-node-env production --progress",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanup": "rm -rf node_modules/"
   },

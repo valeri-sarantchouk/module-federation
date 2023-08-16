@@ -1,15 +1,14 @@
 {
-  "name": "module-federation-host-app",
+  "name": "module-federation-host",
   "version": "1.0.0",
-  "description": "Module Federation Host app (aka shell, root, parent, top-level app)",
+  "description": "Module Federation Host (aka shell, parent, root, top-level) app",
   "author": "Valeri Sarantchouk",
   "license": "ISC",
-  "private": true,
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "webpack build --watch --progress",
-    "start": "webpack serve --open --define-process-env-node-env production --progress",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack build --progress",
+    "start": "webpack serve --open --define-process-env-node-env --progress",
     "cleanup": "rm -rf node_modules/"
   },
   "devDependencies": {
@@ -21,11 +20,5 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "workspaces": [
-    "mfe-button",
-    "mfe-header",
-    "mfe-footer",
-    "mfe-nav"
-  ]
+  }
 }

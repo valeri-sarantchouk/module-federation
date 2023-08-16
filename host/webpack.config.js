@@ -12,8 +12,8 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, 'dist'),
 
-    // publicPath: 'auto',
-    publicPath: '/',
+    publicPath: 'auto',
+    // publicPath: '/',
 
     // Each build needs a unique name to avoid runtime; defaults to "name" in package.json.
     uniqueName: "module-federation-host",
@@ -25,6 +25,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    hot: true
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -46,22 +47,8 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        // This will, in reverse order, do:
-        // 'style-loader' creates style notes from JS strings
-        // 'css-loader' translates CSS into CommonJS
-        // 'sass-loader' compiles Sass into CSS
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-      // {
-      //     test: /\.js$/i,
-      //     exclude: /mode_modules/,
-      //     use: {
-      //         loader: 'babel-loader',
-      //         options: {
-      //             presets: ['@babel/preset-env']
-      //         }
-      //     }
-      // }
     ],
   },
   target: "web",

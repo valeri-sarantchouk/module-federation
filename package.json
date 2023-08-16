@@ -1,0 +1,30 @@
+{
+  "name": "webpack-module-federation-example-javascript",
+  "version": "1.0.0",
+  "description": "Microfrontend app built with Webpack Module Federation and plain JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeri-sarantchouk/module-federation.git"
+  },
+  "author": "Valeri Sarantchouk",
+  "license": "ISC",
+  "workspaces": [
+    "remote-button",
+    "remote-header",
+    "remote-footer",
+    "remote-nav"
+  ],
+  "scripts": {
+    "build:all": "npm run build --workspaces --if-present",
+    "build": "npm run build:host & npm run build:header",
+    "build:host": "cd ./host && npm run build",
+    "build:header": "cd ./remote-header && npm run build",
+
+    "start": "concurrently --kill-others \"npm run start:*\"",
+    "start:host": "cd ./host && npm run start",
+    "start:header": "cd ./remote-header && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
