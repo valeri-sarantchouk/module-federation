@@ -12,9 +12,9 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
 
-    // publicPath: either 'auto' or 'http://localhost:4001/' will work
-    publicPath: 'auto',
+    // Either 'auto' or 'http://localhost:4001/' publicPath works.
     // publicPath: 'http://localhost:4001/',
+    publicPath: 'auto',
     uniqueName: "module-federation-header",
     clean: true,
   },

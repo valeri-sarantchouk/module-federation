@@ -15,8 +15,6 @@ app/**/*.js.map
 .sass-cache/
 .webpack/
 
-package-lock.json
-
 *.log
 lerna-debug.log
 *.lcov

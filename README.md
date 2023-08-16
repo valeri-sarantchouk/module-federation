@@ -1,6 +1,6 @@
-Microfrontend (MFE) sample app monorepo. Implemented using plain JavaScript and Webpack Module Federation.
+Microfrontend (MFE) sample app implemented using plain JavaScript and Webpack Module Federation.
 
-Plain JavaScript implemtation is used to demonstrate module federation in the simplest way possible. For React and Angular MFE component implementations see my other GitHub repositories.
+Plain JavaScript implemtation is used to demonstrate module federation in the simplest way possible.
 
 This monorepo contains all components that go into assembly of a microfrontend app:
   * Host app:
@@ -12,20 +12,18 @@ This monorepo contains all components that go into assembly of a microfrontend a
 
 To run it:
 
-  npm install
-  npm run start
+    npm install
+    npm run start
 
-To build all projects in the monorepo:
+To build all projects in the monorepo sequentially:
 
     npm run build  
-    # sequentially runs all preconfigured build commands
 
-or
+or (same kind of sequential builds, but now using npm workspaces):
 
     npm run build:all
-    # utilizes the power of npm workspaces
 
-It should open the host app in new browser tab at 
+It should open the host app in new browser tab at:
 
     http://localhost:3000/
 
@@ -36,7 +34,5 @@ Each remote app and host can also be run independently:
     npm run start:footer
     npm run start:button
     npm run start:nav
-
-Note: running host app without required remotes will expectedly produce an error.
 
 Being able to manage remote apps independenly allow to put them in their own source repositories and assign different teams to maintain them.

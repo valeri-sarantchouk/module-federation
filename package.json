@@ -15,10 +15,10 @@
     "remote-nav"
   ],
   "scripts": {
-    "build:all": "npm run build --workspaces --if-present",
     "build": "npm run build:host & npm run build:header",
     "build:host": "cd ./host && npm run build",
     "build:header": "cd ./remote-header && npm run build",
+    "build:all": "npm run build --workspaces --if-present",
 
     "start": "concurrently --kill-others \"npm run start:*\"",
     "start:host": "cd ./host && npm run start",
