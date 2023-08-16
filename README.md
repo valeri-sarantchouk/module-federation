@@ -15,17 +15,16 @@ To run it:
     npm install
     npm run start
 
-To build all projects in the monorepo sequentially:
-
-    npm run build  
-
-or (same kind of sequential builds, but now using npm workspaces):
-
-    npm run build:all
-
-It should open the host app in new browser tab at:
-
+This should open the assembled app in new browser tab at:
     http://localhost:3000/
+
+To build all projects in the monorepo sequentially:
+  > `npm run build`
+
+or
+  > `npm run build:all`
+
+The latter utilizes npm workspaces to build all listed projects.
 
 Each remote app and host can also be run independently:
 
@@ -35,4 +34,4 @@ Each remote app and host can also be run independently:
     npm run start:button
     npm run start:nav
 
-Being able to manage remote apps independenly allow to put them in their own source repositories and assign different teams to maintain them.
+Remote apps can be further separatd into their own code repositories and assigned different teams to maintain them.

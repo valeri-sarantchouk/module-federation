@@ -5,12 +5,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Remote Header App to be included in Module Federation host" />
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
 </head>
 
 <body>
-  <!-- TODO: cleanup, REMOVE THE ABOVE MARKUP -->
+  <!-- 
+    This page is not included in the federated app.
+    It exists only to be able to run and test remote header app
+    in a standalone mode.
+    -->
+  <h1 class="page-title">
+    Header testing app (standalone, not federated)
+  </h1>
+
+  <!-- Inject remote header content here -->
   <div id="headerPlacehholder"></div>
+
 </body>
 
 </html>

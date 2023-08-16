@@ -5,26 +5,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Host App in Module Federation" />
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
 </head>
 
 <body>
-  <h1 class="page-title">
-    Module Federation Host
-  </h1>
+  <!-- remote apps will be attached to #mfe-root element -->
+  <div id="mfe-root" class="container"></div>
+  
+  <!-- Notice the placement of the shell content in the assembled app. -->
   <div class="container">
-    <div>Some host app content</div>
+    <div>Shell app content.</div>
   </div>
-  <div id="mfe-root"></div>
-  <!--
-      This is a template supplied to and updated by HtmlWebpackPlugin.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To start dev server: `npm start`.
-      To create a production bundle: `npm run build`.
-    -->
 </body>
+<!--
+    This is a template supplied to and updated by HtmlWebpackPlugin.
+    You can add webfonts, meta tags, or analytics to this file.
+    Webpack's build step will place the bundled scripts into the <body> tag.
+  -->
 
 </html>
