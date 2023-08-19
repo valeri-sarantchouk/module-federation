@@ -51,7 +51,7 @@ module.exports = {
             options: {
               injectType: 'lazyStyleTag',
               insert: (element, options) => {
-                console.log('webpack lazyStyleTag - header app');
+                console.log('webpack lazyStyleTag - header');
                 let parent = options.target || document.head;
                 parent.appendChild(element);
               }

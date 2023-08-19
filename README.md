@@ -7,13 +7,16 @@ This monorepo contains all components that go into assembly of a microfrontend a
   * Remote apps: 
       * Header
       * Navigation
-      * Footer
-      * Button
+      * Body
 
 To run it:
 
     npm install
     npm run start
+
+or with lerna:
+
+    npx lerna run start
 
 This should open the assembled app in new browser tab at:
     http://localhost:3000/
@@ -22,16 +25,17 @@ To build all app in the monorepo sequentially:
   > `npm run build`
 
 or
+
   > `npm run build:all`
 
-The latter utilizes npm workspaces to build all listed projects.
+or
+
+  > `npx lerna run build`
 
 Each remote app and host can also be run independently:
 
-    npm run start:host  
     npm run start:header
-    npm run start:footer
-    npm run start:button
     npm run start:nav
+    npm run start:body
 
 Remote apps can be further separatd into their own code repositories and assigned different teams to maintain and deploy them.

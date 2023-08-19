@@ -9,6 +9,7 @@
   "author": "Valeri Sarantchouk",
   "license": "ISC",
   "workspaces": [
+    "host",
     "remote-header",
     "remote-body",
     "remote-footer",
@@ -20,8 +21,8 @@
     "build:header": "cd ./remote-header && npm run build",
     "build:body": "cd ./remote-body && npm run build",
     "build:nav": "cd ./remote-nav && npm run build",
+    
     "build:all": "npm run build --workspaces --if-present",
-
     "start": "concurrently --kill-others \"npm run start:*\"",
     "start:host": "cd ./host && npm run start",
     "start:header": "cd ./remote-header && npm run start",
@@ -29,6 +30,7 @@
     "start:nav": "cd ./remote-nav && npm run start"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "lerna": "^7.1.5"
   }
 }

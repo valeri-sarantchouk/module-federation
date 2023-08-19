@@ -3,6 +3,7 @@
 <!-- This template is supplied to and updated by HtmlWebpackPlugin.
      Add webfonts, meta tags, or analytics as needed.
      Webpack's build step will place the bundled scripts into the <body> tag. -->
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,16 +19,16 @@
     <div id="mfe-header"></div>
     <div id="mfe-body"></div>
     <div id="mfe-nav"></div>
-    <div id="mfe-footer"></div>
   </div>
-  
+
   <!-- Notice the placement of the shell app content after 
        microsfrontends are loaded in the browser. -->
   <div class="container">
     <div>Shell app content.</div>
   </div>
 </body>
-  	<!-- This script tag is, it improves loading performance.
+<!-- This script tag is, it improves loading performance.
          Try removing it and watch Network tab.  -->
-         <script src="http://localhost:4001/remoteHeader.js"></script>
+<script src="http://localhost:4001/remoteHeader.js"></script>
+
 </html>
