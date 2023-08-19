@@ -1,0 +1,26 @@
+:root {
+  --header-color-face-1: #4a4458;
+  --header-color-face-2: #343435;
+  --header-color-face-3: #2a2831;
+  --header-color-face-4: #1c1b1f;
+  --header-color-face-5: #1c1b1f;
+  
+  --header-color-surface-1: #eff3fa;
+  --header-color-surface-2: #edf2fa;
+  --header-color-surface-3: #f0ebf4;
+  --header-color-surface-4: #e7e1ef;
+  --header-color-surface-5: #e4e5f1;
+}
+
+.mfe-header-container {
+  border: 1px dashed #b4b5d1;
+  border-radius: 5px;
+  background-color: #e4e5f1;
+}
+
+.mfe-header-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  color: var(--header-color-face-3);
+  padding: 0 20px;
+}

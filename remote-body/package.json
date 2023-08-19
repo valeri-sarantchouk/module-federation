@@ -1,11 +1,10 @@
 {
-  "name": "module-federation-navigation-app",
+  "name": "module-federation-body",
   "version": "1.0.0",
-  "description": "Remote Navigation app",
+  "description": "Remote microfrontend app: Body",
   "author": "Valeri Sarantchouk",
   "license": "ISC",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "build": "webpack build --progress",
     "start": "webpack serve",
@@ -15,6 +14,7 @@
   "devDependencies": {
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "raw-loader": "^4.0.2",
     "sass": "^1.66.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",

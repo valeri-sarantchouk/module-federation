@@ -1,0 +1,41 @@
+:root {
+  --nav-color-face-1: #4a4458;
+  --nav-color-face-2: #343435;
+  --nav-color-face-3: #2a2831;
+  --nav-color-face-4: #1c1b1f;
+  --nav-color-face-5: #1c1b1f;
+
+  --nav-color-surface-1: #eff3fa;
+  --nav-color-surface-2: #edf2fa;
+  --nav-color-surface-3: #f0ebf4;
+  --nav-color-surface-4: #e7e1ef;
+  --nav-color-surface-5: #e4e5f1;
+}
+
+.mfe-nav-container {
+  border: 1px solid #e7e7f7;
+  border-radius: 5px;
+  background-color: #eff3fa;
+}
+
+.mfe-nav-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mfe-nav-item__cta {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #49467f;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.mfe-nav-item__cta:hover {
+  color: #fcfcff;
+  background-color: #8d9eba;
+}

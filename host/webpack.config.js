@@ -33,6 +33,9 @@ module.exports = {
       // List of remotes with URLs
       remotes: {
         'remote-header-app': `remoteHeader@http://localhost:4001/remoteHeader.js`,
+        'remote-body-app': `remoteBody@http://localhost:4002/remoteBody.js`,
+        'remote-nav-app': `remoteNavigation@http://localhost:4003/remoteNavigation.js`,
+        'remote-footer-app': `remoteFooter@http://localhost:4004/remoteFooter.js`,
       },
     }),
     new HtmlWebpackPlugin({

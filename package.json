@@ -9,20 +9,24 @@
   "author": "Valeri Sarantchouk",
   "license": "ISC",
   "workspaces": [
-    "remote-button",
     "remote-header",
+    "remote-body",
     "remote-footer",
     "remote-nav"
   ],
   "scripts": {
-    "build": "npm run build:host & npm run build:header",
+    "build": "npm run build:host & npm run build:header && npm run build:body && npm run build:nav",
     "build:host": "cd ./host && npm run build",
     "build:header": "cd ./remote-header && npm run build",
+    "build:body": "cd ./remote-body && npm run build",
+    "build:nav": "cd ./remote-nav && npm run build",
     "build:all": "npm run build --workspaces --if-present",
 
     "start": "concurrently --kill-others \"npm run start:*\"",
     "start:host": "cd ./host && npm run start",
-    "start:header": "cd ./remote-header && npm run start"
+    "start:header": "cd ./remote-header && npm run start",
+    "start:body": "cd ./remote-body && npm run start",
+    "start:nav": "cd ./remote-nav && npm run start"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"

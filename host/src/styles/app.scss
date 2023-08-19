@@ -1,25 +1,41 @@
 :root {
   --container-width: 800px;
+
+  --color-face-1: #4a4458;
+  --color-face-2: #2a2831;
+  --color-face-3: #1c1b1f;
+  
+  --color-surface-2: #f3f6fc;
+  --color-surface-3: #eff3fa;
+  --color-surface-4: #edf2fa;
+  --color-surface-5: #eaf0f9;
+  --color-surface-7: #f0ebf4;
+  --color-surface-8: #e7e1ef;
 }
 
 body {
-  background-color: #b4b5d1;
-  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   padding: 5px;
+  background-color: #b4b5d1;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; // flex-start
+  text-align: center;
+  
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
   width: var(--container-width);
   max-width: 100%;
   margin-bottom: 15px;
   padding: 5px;
-  text-align: center;
+  background-color: #fff;
 }

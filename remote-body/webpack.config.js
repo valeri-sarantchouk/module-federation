@@ -3,7 +3,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  name: "remote-header-app",
+  name: "remote-body-app",
   mode: 'development',
   entry: {
     index: './src/index.js'
@@ -12,33 +12,31 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
 
-    // publicPath: either 'auto' or 'http://localhost:4001/' works.
-    // publicPath: 'http://localhost:4001/',
+    // publicPath: 'http://localhost:4002/', // this also works
     publicPath: 'auto',
-    uniqueName: "module-federation-header",
+    uniqueName: "module-federation-body",
     clean: true,
   },
   devtool: 'source-map',
   devServer: {
-    port: 4001,
+    port: 4002,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    // hot: true
+    hot: true
   },
   plugins: [
     new ModuleFederationPlugin({
       // a unique name to be used by host
-      name: 'remoteHeader',
-      // filename: if not specified, defaults to the 'name' value ("remoteHeader.js")
-      // filename: 'remote-header-entry.js',
+      name: 'remoteBody',
+      // filename: 'remote-body-entry.js', // if not specified, defaults to the 'name' value ("remoteBody.js")
       exposes: {
-        './header': './src/header-app',
+        './body': './src/body-app',
       }
     }),
     new HtmlWebpackPlugin({
       template: './src/standalone-index.html',
-      title: 'Standalone SPA to test Header App',
+      title: 'Standalone SPA to test Body App',
     }),
   ],
   module: {
@@ -51,7 +49,7 @@ module.exports = {
             options: {
               injectType: 'lazyStyleTag',
               insert: (element, options) => {
-                console.log('webpack lazyStyleTag - header app');
+                console.log('webpack lazyStyleTag - body app');
                 let parent = options.target || document.head;
                 parent.appendChild(element);
               }

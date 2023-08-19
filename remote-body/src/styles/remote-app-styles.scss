@@ -1,0 +1,48 @@
+:root {
+  --body-color-face-1: #4a4458;
+  --body-color-face-2: #343435;
+  --body-color-face-3: #2a2831;
+  --body-color-face-4: #1c1b1f;
+  --body-color-face-5: #1c1b1f;
+
+  --body-color-surface-1: #eff3fa;
+  --body-color-surface-2: #edf2fa;
+  --body-color-surface-3: #f0ebf4;
+  --body-color-surface-4: #e7e1ef;
+  --body-color-surface-5: #e4e5f1;
+}
+
+.mfe-body-container {
+  border: 1px solid #efefae;
+  border-radius: 5px;
+  background-color: #f1f1e4;
+  padding-left: 20px;
+  font-family: sans-serif;
+}
+
+.mfe-body-section {
+  padding: 10px;
+}
+
+.mfe-section-narrative {
+  padding: 0 10px;  
+}
+
+.mfe-section-amounts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 10px;  
+}
+
+.mfe-section-amounts-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.mfe-card {
+  border: 1px solid #e7e4d1;
+  padding: 10px;
+  margin: 10px;
+  background-color: lemonchiffon;
+}

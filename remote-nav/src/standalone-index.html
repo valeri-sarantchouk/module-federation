@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Remote Body App to be included in Module Federation host" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <!-- 
+    This page is not included in the federated app.
+    It exists only to be able to run and test remote header app
+    in a standalone mode.
+    -->
+  <h1 class="standalone-page-title">
+    Standalone SPA to test "Navigation" application
+  </h1>
+
+  <!-- Inject remote body content here -->
+  <div id="standalone-navigatioon-root"></div>
+
+</body>
+
+</html>
